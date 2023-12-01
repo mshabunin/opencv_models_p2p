@@ -1,0 +1,27 @@
+Share models for OpenCV DNN tests using P2P protocol
+
+**Platform**: Linux
+**Prerequisites**: python3, transmission-cli
+
+### Updating models on original seed machine
+* run download script to sync and verify models in `opencv_models/dnn` folder:
+  ```.sh
+  <opencv_extra>/testdata/dnn/download_models.py --cleanup --dst opencv_models/dnn
+  ```
+  `--cleanup` option is needed to remove unnecessary archives after download
+* run `create.sh` to regenerate `.torrent` file and corresponding decoded `.json` file
+* commit and push new state to git upstream
+* run `seed.sh` to start seeding
+
+### Initial download using P2P only
+* get this repository, e.g. `git clone https://github.com/mshabunin/opencv_models_p2p.git`
+* run `seed.sh` and wait for synchronization
+
+### Update to the latest version using P2P
+(assuming you already have this repository downloaded and seeding)
+* stop seeding
+* update repository to the latest version, e.g. `git pull origin master`
+* run `seed.sh`
+
+### Download using custom torrent client
+* add file `torrent/opencv_models.torrent` to your client

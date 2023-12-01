@@ -5,4 +5,4 @@ set -ex
 transmission-cli \
     --verify \
     -w opencv_models \
-    opencv_models.torrent
+    torrent/opencv_models.torrent

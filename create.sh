@@ -3,7 +3,7 @@
 set -ex
 
 transmission-create \
-    -o opencv_models.torrent \
+    -o torrent/opencv_models.torrent \
     -t "udp://tracker.opentrackr.org:1337/announce" \
     -t "udp://tracker.openbittorrent.com:6969" \
     -t "udp://tracker.torrent.eu.org:451" \

@@ -2,3 +2,4 @@ opencv_models/
 __pycache__/
 cache/
 *.pyc
+.container-config/
