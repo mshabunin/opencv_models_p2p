@@ -10,4 +10,4 @@ transmission-create \
     -c "OpenCV test models" \
     opencv_models/dnn
 
-python decode.py
+python3 decode.py
